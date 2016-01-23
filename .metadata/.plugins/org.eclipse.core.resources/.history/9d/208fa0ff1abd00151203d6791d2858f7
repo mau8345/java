@@ -1,0 +1,40 @@
+package module2;
+
+public class VehicleWithConstructor {
+int passangers; //quantity of passangers;
+int fuelcap; //capacity of fuel in fuelcap;
+int mpg; // how much gallons is necessary to drive 1 mile;
+
+// its constructor class vehicle
+VehicleWithConstructor (int p, int f, int m){ //constructor class vehicle..
+	passangers = p;
+	fuelcap = f;
+	mpg = m;
+}
+//method to calculate the range(дальность) of the trip 
+int range(){
+	return mpg * fuelcap;}
+//method to calculate the quantity of necessary fuel for
+//overcoming the range
+double fuelneeded (double miles){
+	return (double) miles / mpg;}
+
+	public static void main(String[] args) 
+	throws java.io.IOException {
+		// TODO Auto-generated method stub
+		double dist;
+		System.out.println("please input the distance that is necessary to overcome");
+		dist = (double) System.in.read();
+		//create new classes (vehicles)
+		VehicleWithConstructor minivan = new VehicleWithConstructor(7, 16, 21);
+		VehicleWithConstructor sportscar = new VehicleWithConstructor(2, 14, 12);
+		double gallons;
+		
+		gallons = minivan.fuelneeded(dist);//initiate something in;
+		System.out.println(gallons + " galons is necessary to drive " + dist + " miles for minivan");
+		gallons = sportscar.fuelneeded(dist);
+		System.out.println(gallons + " galons is necessary to drive " + dist + " miles for sportscar");
+
+	}
+
+	}

@@ -1,0 +1,27 @@
+class Queue{
+char q[];//this array hold the queue;
+int putloc, getloc; //the put and get indices (index)
+Queue (int size){
+	q = new char[size]; //allocate the memory for queue
+	putloc = getloc = 0;}
+//put character into the queue;
+void put(char ch){
+	if (putloc == q.length) {System.out.print("queue is full"); 
+	return;}
+q[putloc] = ch;} 
+//Get the character from the queue
+char get() {
+if (getloc == putloc) {System.out.print ("queue is empty");
+	return (char) 0;}
+}	
+
+}
+
+public class QueueDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

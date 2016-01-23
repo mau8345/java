@@ -1,0 +1,24 @@
+
+public class AssingingArrayReference {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int i;
+int nums1 [] = new int[10];
+int nums2 [] = new int[10];
+for (i = 0; i < 10; i ++) nums1 [i] = i;
+for (i = 0; i < 10; i ++) nums2 [i] = -i;
+System.out.println("Here is nums 1 ");
+for (i = 0; i < 10; i ++) System.out.print(nums1[i] + " ");
+System.out.println("Here is nums 2 ");
+for (i = 0; i < 10; i ++) System.out.print(nums2[i] + " ");
+nums2 = nums1; //now nums 2 refer to nums 1
+System.out.println("Here is nums 2 after assinment " );
+for (i = 0; i < 10; i ++) System.out.print(nums2[i] + " ");
+//now operate on nums 1 array through nums 2
+nums2[3] = 99;
+System.out.println("Here is nums 1 ");
+for (i = 0; i < 10; i ++) System.out.print(nums1[i] + " ");
+	}
+
+}
